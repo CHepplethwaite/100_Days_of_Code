@@ -10,4 +10,12 @@
 <br>
 <h3 style="text-align:center">CRUD App<h3>
 
+<div>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+</div>
+
 {% endblock content %}
