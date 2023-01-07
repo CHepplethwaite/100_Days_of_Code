@@ -3,6 +3,8 @@ from django.views.generic import CreateView,DeleteView
 from django.urls import reverse_lazy
 from .models import PatientInfo
 from django.views.generic.edit import UpdateView
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 
 
 #def index(request):
@@ -38,3 +40,9 @@ class UpdateCBV(UpdateView):
     "image",
     "national_id"
 ]
+
+class DetailCBV(DetailView):
+    model=PatientInfo
+
+class ListCBV(ListView):
+    model=PatientInfo
