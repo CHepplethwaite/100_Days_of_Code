@@ -6,5 +6,5 @@ urlpatterns = [
     path("Update/",crud_views.UpdateCBV.as_view(),name="update"),
     path("delete/",crud_views.DeleteCBV.as_view(),name="delete"),
     path("list/",crud_views.ListCBV.as_view(),name="list"),
-    path("detail/",crud_views.DetailCBV.as_view(),name="detail"),
+    path("<pk>/",crud_views.DetailCBV.as_view(),name="detail"),
 ]
