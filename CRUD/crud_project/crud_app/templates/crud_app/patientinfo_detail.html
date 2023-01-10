@@ -1,8 +1,16 @@
 {% extends 'crud_app/base.html' %}
 
 {% block content %}
-
-<h1>{{object.first_name}}</h1>
-<p>{{object.last_name}}</p>
+<br>
+<h1>Patient Details</h1>
+<ul>
+<li>First name: {{object.first_name}}</li>
+<li>Last name: {{object.last_name}}</li>
+<li>Age: {{object.age}}</li>
+<li>Phone number: {{object.phone_number}}</li>
+<li>Address: {{object.address}}</li>
+<li>Comment: {{object.comment}}</li>
+<li>NRC/ID: {{object.national_id}}</li>
+</ul>
 
 {% endblock content %}

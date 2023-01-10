@@ -5,30 +5,25 @@
 {% endblock title %}
 
 {% block content %}
-
-<h1 style="text-align:center">100 Days of Code</h1>
 <br>
-<h3 style="text-align:center">List of patients:<h3>
-
+<h3 style="text-align:center">Patient List:<h3>
+<br>
+<br>
 <div>
-    <ul>
+<h5>Select record:<h5>
+    <br>
+    <ol>
         <!--iterate over object list-->
         {% for object in object_list %}
 
         <!--display objects-->
-        <li>{{object.first_name}}</li>
-        <li>{{object.last_name}}</li>
-        <li>{{object.age}}</li>
-        <li>{{object.phone_number}}</li>
-        <li>{{object.address}}</li>
-        <li>{{object.comment}}</li>
-        <li>{{object.national_id}}</li>
+        <li>{{object.first_name}} {{object.last_name}}</li>
 <hr/>
         <!--if list is empty -->
         {% empty %}
         <li>No objects yet.</li>
         {% endfor %}
-    </ul>
+    </ol>
 </div>
 
 {% endblock content %}
